@@ -1,5 +1,8 @@
 package Tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class TreeStructure {
     TreeNode root;
 
@@ -45,6 +48,21 @@ class TreeStructure {
             postorder(treeNode.leftT);
             postorder(treeNode.rightT);
             System.out.print(treeNode.number + " ");
+        }
+    }
+
+    void levelorder(TreeNode treeNode) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode polled = queue.poll();
+            System.out.print(polled.number + " ");
+            if (polled.leftT != null) {
+                queue.add(polled.leftT);
+            }
+            if (polled.rightT != null) {
+                queue.add(polled.rightT);
+            }
         }
     }
 }

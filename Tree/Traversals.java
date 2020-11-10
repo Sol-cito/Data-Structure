@@ -25,10 +25,12 @@ public class Traversals {
          *     8   9   10    11
          *
          * */
-        t.preorder(t.root);
+        t.preorder(t.root); // 1 2 4 8 9 5 10 3 6 7 11
         System.out.println();
-        t.inorder(t.root);
+        t.inorder(t.root); // 8 4 9 2 10 5 1 6 3 7 11
         System.out.println();
-        t.postorder(t.root);
+        t.postorder(t.root); // 8 9 4 10 5 2 6 11 7 3 1
+        System.out.println();
+        t.levelorder(t.root); // 1 2 3 4 5 6 7 8 9 10 11
     }
 }
